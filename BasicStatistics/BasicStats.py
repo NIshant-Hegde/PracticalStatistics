@@ -25,7 +25,7 @@ print("Weighted Mean: ", np.average(state['Murder.Rate'], weights=state['Populat
 #5. Weighted Median
 print("Weighted Median: ", wquantiles.median(state['Murder.Rate'], weights=state['Population']))
 
-#Calculating Estimates of Variability
+#Calculopating Estimates of Variability
 
 #6. Standard Deviation - Square root of variance 
 print("Standard Deviation: ", state['Population'].std())
@@ -35,4 +35,7 @@ print("Interquantile Range: ", state['Population'].quantile(0.75) - state['Popul
 
 #8 Mean Absolute Deviation (MAD)
 print("Mean Absolute Deviation: ", robust.scale.mad(state['Population']))
+
+#9 Quantilesß
+print("Different quantiles: ", state['Murder.Rate'].quantile([0.05, 0.25, 0.5, 0.75]))
 
